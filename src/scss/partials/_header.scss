@@ -1,10 +1,14 @@
-.header {
+.ss-header {
+  position: relative;
+  width: 100%;
 
-}
-.logo {
-  margin: -58px 0 0 -100px;
-  @include position(absolute, 50% 0 0 50%);
-  img {
+  .header__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
+    max-width: 100%;
   }
+
 }

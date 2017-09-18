@@ -22,6 +22,8 @@
 @import 'partials/_sidebar.scss';
 @import 'partials/_main.scss';
 @import 'partials/_footer.scss';
+@import 'partials/_about.scss';
+@import 'partials/_contact.scss';
 
 //----------------------------------*\
 // OBJECTS & MODULES
@@ -33,6 +35,7 @@
 @import 'modules/_typography.scss';
 @import 'modules/_misc.scss';
 @import 'modules/_app.scss';
+@import 'modules/_slideshow.scss';
 
 // Enhancement modules
 @import 'modules/_breakpoints.scss';

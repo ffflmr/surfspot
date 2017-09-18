@@ -12,18 +12,13 @@
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility; }
 
-html {
-  font-size: 62.5%;
-  background: radial-gradient(ellipse at center, #F7F6F0 0, #c2ba8c 80%, #b0a66b 100%); }
-
 body {
   font: 300 13px/1.6 'Helvetica Neue', Helvetica, Arial;
   color: #444;
   transition: all .4s .3s ease-in; }
 
 body, html {
-  min-height: 100vh;
-  overflow: hidden; }
+  min-height: 100vh; }
 
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -391,19 +386,39 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-.logo {
-  margin: -58px 0 0 -100px;
-  position: absolute;
-  top: 50%;
-  left: 50%; }
+.ss-header {
+  position: relative;
+  width: 100%; }
+  .ss-header .header__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    max-width: 100%; }
 
-.nav ul {
-  list-style: none; }
+.ss-nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+      flex-flow: column;
+  position: absolute; }
+  .ss-nav .nav__item {
+    font-family: 'Airstrike';
+    color: yellow;
+    text-decoration: none; }
+
+.main {
+  font-family: 'Airstrike';
+  color: yellow; }
+
+.ss-about {
+  background-color: #2d8782;
+  padding: 0 15px; }
 
 @font-face {
-  font-family: 'Font-Name';
-  src: url("../fonts/font-name.eot");
-  src: url("../fonts/font-name.eot?#iefix") format("embedded-opentype"), url("../fonts/font-name.woff") format("woff"), url("../fonts/font-name.ttf") format("truetype"), url("../fonts/font-name.svg#font-name") format("svg");
+  font-family: 'Airstrike';
+  src: url("../fonts/airstrike/airstrike.ttf");
   font-weight: normal;
   font-style: normal; }
 
@@ -426,6 +441,17 @@ textarea {
   background: #333;
   color: #fff;
   text-shadow: none; }
+
+.ss-slideshow {
+  width: 100%; }
+  .ss-slideshow .slideshow__img.-active {
+    display: block; }
+  .ss-slideshow .slideshow__img img {
+    width: 100%; }
+
+.logo {
+  position: absolute;
+  top: 60px; }
 
 @media print {
   * {
