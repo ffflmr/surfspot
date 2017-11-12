@@ -1,14 +1,32 @@
 .ss-header {
-  position: relative;
+  position: fixed;
+  top: 0;
   width: 100%;
 
-  .header__logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  display: flex;
+  flex: row;
+  justify-content: space-between;
 
-    max-width: 100%;
+  width: 100%;
+
+  font-family: 'Airstrike';
+  letter-spacing: 0.2em;
+  color: #000;
+  z-index: 10;
+
+  .header__title,
+  .header__item {
+    padding: 1.5em;
+
+  }
+
+  .header__title {
+    margin: 0;
+  }
+
+  .header__logo {
+    max-width: 20%;
+
   }
 
 }

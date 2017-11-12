@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Surf Spot</title>
+    <title>Surf Spot - service d'éclairage moderne</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Service d'éclairage moderne -- Équipe d'éclairagiste & machiniste de Montréal pour vos projets filmés">
@@ -14,102 +14,143 @@
     <link href="assets/css/style.min.css" rel="stylesheet">
 
     <script src="assets/components/modernizr/modernizr.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+
+
+          // Si nest pas actif, ajoute le & enleve ailleurs.
+            console.log(document.querySelectorAll(".nav__item"));
+
+            if (event.currentTarget.classList.contains("-active") === false){
+              event.currentTarget.className += " -active";
+            }
+
+            // console.log (event.currentTarget.classList.contains("-active") );
+
+          } // End if
+        });
+      });
+    </script>
   </head>
   <body>
 
-    <header class="ss-header" role="banner">
+    <header class="ss-header">
 
+      <h1 class= "header__title">
+        <img class="header__logo" src="assets/img/surfspot-logo.png" alt="Surfspot service d'éclairage moderne, vidéo, cinéma. Lighting services in Montréal">
+      </h1>
 
-      <img class="header__logo" src="assets/img/surfspot-logo.png" alt="Surfspot service d'éclairage modern, vidéo, cinéma. Lighting services in Montréal">
+      <!-- <h2 class= "header__subtitle">Service d'éclairage moderne</h2> -->
 
-
-      <!-- <nav class="ss-nav">
-        <a class="nav__item" href="about">Services</a>
-        <a class="nav__item" href="contact">Contact</a>
-      </nav> -->
-
-      <div class="ss-slideshow">
-
-          <div class="slideshow__img">
-              <img src="assets/img/surfspot_1.jpg" alt="Logo">
-          </div>
-
-          <div class="slideshow__img">
-              <img src="assets/img/brandon-compagne-308937.jpg" alt="Logo">
-          </div>
-
-          <div class="slideshow__img">
-              <img src="assets/img/surfspot_2.jpg" alt="Logo">
-          </div>
-
-          <div class="slideshow__img">
-              <img src="assets/img/tyler-lastovich-331370.jpg" alt="Logo">
-          </div>
-
-          <div class="slideshow__img">
-              <img src="assets/img/surfspot_3.jpg" alt="Logo">
-          </div>
-
-          <div class="slideshow__img">
-              <img src="assets/img/trevor-cleveland-175159.jpg" alt="Logo">
-          </div>
-
+      <div class="header__item">
+        <nav class="ss-nav">
+          <a class="nav__item -active" href="#home">home</a>
+          <a class="nav__item" href="#about">Services</a>
+          <a class="nav__item" href="#contact">Contact</a>
+        </nav>
       </div>
 
     </header>
 
-    <!-- <main class="main" role="main">
+    <main class="ss-main">
 
-      <section id="about" class="ss-about">
-        <h1>Surf Spot <span>service d'éclairage moderne</span></h1>
-        <h2>Équipe éclairage & machinistes pour vos projets filmées</h2>
-        <p>L'équipe de SurfSpot travaille dans l'industrie du cinéma & de la publicité québecoise depuis plus de 10 ans. Nous avons un camion complet, remplis de projecteurs & d'équipement machiniste, disponible pour vos projets:</p>
-        <ul>
-          <li>Grosse Lampe</li>
-          <li>lite-mat</li>
-          <li>Gros camion</li>
+    <section id="home">
+        <div class="ss-slideshow">
 
-        </ul>
+          <div class="slideshow__item">
+              <img class="slideshow__img" src="assets/img/surfspot_1.jpg" alt="Logo">
+          </div>
 
-      </section>
+          <div class="slideshow__item">
+              <img class="slideshow__img" src="assets/img/brandon-compagne-308937.jpg" alt="Logo">
+          </div>
 
-      <section id="contact" class="ss-contact">
+          <div class="slideshow__item">
+              <img class="slideshow__img" src="assets/img/surfspot_2.jpg" alt="Logo">
+          </div>
 
-        <div class="contact-item">
-          <h2>Alexis Vallee Charest</h2>
-          <h3>Chef Eclairagiste</h3>
-          <p>514-888-8888</p>
-          <p><a href="#">alexisvalleecharest@gmail.com</a></p>
-          <p><a href="#">imdb</a></p>
+          <div class="slideshow__item">
+              <img class="slideshow__img" src="assets/img/tyler-lastovich-331370.jpg" alt="Logo">
+          </div>
+
+          <div class="slideshow__item">
+              <img class="slideshow__img" src="assets/img/surfspot_3.jpg" alt="Logo">
+          </div>
+
+          <div class="slideshow__item">
+              <img class="slideshow__img" src="assets/img/trevor-cleveland-175159.jpg" alt="Logo">
+          </div>
+
+      </div>
+    </section>
+
+      <section id="about" class="ss-section">
+        <div class="section__content">
+          <h1>Surf Spot <span>service d'éclairage moderne</span></h1>
+          <h2>Équipe éclairage & machinistes pour vos projets filmées</h2>
+          <p>L'équipe de SurfSpot travaille dans l'industrie du cinéma & de la publicité québecoise depuis plus de 10 ans. Nous avons un camion complet, remplis de projecteurs & d'équipement machiniste, disponible pour vos projets:</p>
+          <ul>
+            <li>Grosse Lampe</li>
+            <li>lite-mat</li>
+            <li>Gros camion</li>
+          </ul>
         </div>
 
-        <div class="contact-item">
-          <h2>Mathieu Gauvrault-Lefrancois</h2>
-          <h3>Chef Machino</h3>
-          <p>514-888-8888</p>
-          <p><a href="#">alexisvalleecharest@gmail.com</a></p>
-          <p><a href="#">imdb</a></p>
+      </section>
+
+      <section id="contact" class="ss-section">
+
+        <div class="section__content">
+          <div class="contact-item">
+            <h2>Alexis Vallee Charest</h2>
+            <h3>Chef Eclairagiste</h3>
+            <p>514-888-8888</p>
+            <p><a href="#">alexisvalleecharest@gmail.com</a></p>
+            <p><a href="#">imdb</a></p>
+          </div>
+
+          <div class="contact-item">
+            <h2>Mathieu Gauvrault-Lefrancois</h2>
+            <h3>Chef Machino</h3>
+            <p>514-888-8888</p>
+            <p><a href="#">alexisvalleecharest@gmail.com</a></p>
+            <p><a href="#">imdb</a></p>
+          </div>
+
+          <p>Nous travaillons en collaboration avec <a href="#">cinepool</a></p>
+
         </div>
 
-        <p>Nous travaillons en collaboration avec <a href="#">cinepool</a></p>
-
 
       </section>
 
-      <section id="camion" class="ss-equipement">
+    </main>
 
-        <h1>Notre équipement</h1>
-
-
-      </section>
-
-
-    </main> -->
-
-
-
-    <footer class="footer" role="contentinfo">
-
+    <footer class="ss-footer">
+        <img class="footer__logo" src="" alt="">
+        <p class="footer__item">Copyright &copy;<span class="current__year"></span><a href="www.lalemaire.com">lalemaire</a> & <a href="www.ffflmr.com">ffflmr</a></p>
     </footer>
 
     <script src="assets/components/jquery/jquery.min.js"></script>

@@ -13,7 +13,7 @@
   text-rendering: optimizeLegibility; }
 
 body {
-  font: 300 13px/1.6 'Helvetica Neue', Helvetica, Arial;
+  font: 300 16px/1.6 'Helvetica Neue', Helvetica, Arial;
   color: #444;
   transition: all .4s .3s ease-in; }
 
@@ -387,30 +387,57 @@ textarea {
   /* 2 */ }
 
 .ss-header {
-  position: relative;
-  width: 100%; }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: row;
+      flex: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  width: 100%;
+  font-family: 'Airstrike';
+  letter-spacing: 0.2em;
+  color: #000;
+  z-index: 10; }
+  .ss-header .header__title,
+  .ss-header .header__item {
+    padding: 1.5em; }
+  .ss-header .header__title {
+    margin: 0; }
   .ss-header .header__logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-    max-width: 100%; }
+    max-width: 20%; }
 
 .ss-nav {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column;
       flex-flow: column;
-  position: absolute; }
+  -ms-flex-align: end;
+      align-items: flex-end;
+  width: 100%;
+  z-index: 10; }
   .ss-nav .nav__item {
-    font-family: 'Airstrike';
-    color: yellow;
     text-decoration: none; }
+    .ss-nav .nav__item .home {
+      display: none; }
+    .ss-nav .nav__item.-active {
+      display: none; }
 
 .main {
   font-family: 'Airstrike';
   color: yellow; }
+
+.ss-section {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  background-color: #fff; }
+
+.section__content {
+  max-width: 60%;
+  margin: auto; }
 
 .ss-about {
   background-color: #2d8782;
@@ -442,12 +469,21 @@ textarea {
   color: #fff;
   text-shadow: none; }
 
-.ss-slideshow {
-  width: 100%; }
-  .ss-slideshow .slideshow__img.-active {
-    display: block; }
-  .ss-slideshow .slideshow__img img {
-    width: 100%; }
+.ss-slideshow .slideshow__item {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100vh;
+  /* of parent width */ }
+
+.ss-slideshow .slideshow__img {
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+  max-height: 100%;
+  min-width: 100%; }
 
 .logo {
   position: absolute;

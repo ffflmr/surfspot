@@ -1,5 +1,16 @@
 .main {
-
     font-family: 'Airstrike';
     color: yellow;
+}
+
+.ss-section {
+    display: grid;
+    height: 100vh;
+
+    background-color: #fff;
+}
+
+.section__content {
+    max-width: 60%; 
+    margin: auto;
 }
