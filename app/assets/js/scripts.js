@@ -6,37 +6,42 @@
  * @version 1.0.5
  * Copyright 2017. MIT licensed.
  */
-(function ($, window, document, undefined) {
+(function ($, window, document) {
 
   'use strict';
 
+  function slideThisBaby () {
+
+    var aSlides = Array.prototype.slice.call(document.querySelectorAll('.slideshow__item'));
+    var iLength = aSlides.length;
+    var slideIndex = 0;
+
+    setInterval( function(){
+
+        aSlides[slideIndex].style.display = "none";
+
+        if (slideIndex+1 >= iLength) {
+            slideIndex = 0;
+        } else {
+            slideIndex++;
+        }
+        // slideIndex is now the next index
+        aSlides[slideIndex].style.display = "block";
+
+        // sliderIndex = (slideIndex+1 >= iLenght) ? 0 : sliderIndex + 1;
+        // (condition) ? ResultIf : resultElse;
+
+    }, 400);
+
+  }
+
   $(function () {
 
-
-    function slideThisBaby() {
-
-      var aSlides = Array.from(document.querySelectorAll('.slideshow__item'));
-      var totalSlides = aSlides.length;
-
-      for (var i = 0; i < totalSlides; i++) {
-        aSlides[i].style.display = 'none';
-      }
-
-      slideIndex++;
-      if (slideIndex > totalSlides) {
-        slideIndex = 1
-      }
-      
-       aSlides[slideIndex-1].style.display = 'block';
-       setTimeout(slideThisBaby, 400); // Change image every 0,4 seconds
-
-
-
-    }
-
-    var slideIndex = 0;
     slideThisBaby();
 
   });
+
+
+
 
 })(jQuery, window, document);

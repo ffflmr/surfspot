@@ -419,7 +419,8 @@ textarea {
   width: 100%;
   z-index: 10; }
   .ss-nav .nav__item {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #2d8782; }
     .ss-nav .nav__item .home {
       display: none; }
     .ss-nav .nav__item.-active {
@@ -442,6 +443,26 @@ textarea {
 .ss-about {
   background-color: #2d8782;
   padding: 0 15px; }
+
+#contact .section__content {
+  display: -ms-flexbox;
+  display: flex; }
+
+#contact contact-item {
+  padding: 0 20px; }
+
+#contact .contact__name {
+  font-size: 1em; }
+
+#contact .contact__title {
+  font-size: 0.875em; }
+
+#contact .contact__email,
+#contact .contact__link {
+  display: block; }
+
+#contact:first-child {
+  font: 0.685em; }
 
 @font-face {
   font-family: 'Airstrike';
@@ -470,10 +491,13 @@ textarea {
   text-shadow: none; }
 
 .ss-slideshow .slideshow__item {
+  display: none;
   position: relative;
   overflow: hidden;
   padding-bottom: 100vh;
   /* of parent width */ }
+  .ss-slideshow .slideshow__item:first-child {
+    display: block; }
 
 .ss-slideshow .slideshow__img {
   position: absolute;

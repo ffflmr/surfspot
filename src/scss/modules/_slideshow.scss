@@ -3,9 +3,15 @@
 
 
     .slideshow__item {
+      display: none;
+
       position: relative;
       overflow: hidden;
       padding-bottom: 100vh; /* of parent width */
+
+      &:first-child {
+          display: block;
+      }
 
     }
 

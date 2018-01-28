@@ -12,6 +12,7 @@
   .nav__item {
 
     text-decoration: none;
+    color: #2d8782;
 
     .home {
       display: none;
@@ -20,7 +21,7 @@
     &.-active {
       display: none;
 
-      
+
     }
   }
 

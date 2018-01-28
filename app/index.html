@@ -18,6 +18,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
       $(document).ready(function(){
+
         // Add smooth scrolling to all links
         $("a").on('click', function(event) {
 
@@ -39,20 +40,32 @@
               window.location.hash = hash;
             });
 
+            // Loop dans les nav__item & Si nest pas actif, ajoute le & enleve ailleurs.
+            function navClickedItem (event) {
 
-          // Si nest pas actif, ajoute le & enleve ailleurs.
-            console.log(document.querySelectorAll(".nav__item"));
+              var clickedNavItem = event.currentTarget;
+              var arrayNavItems = Array.prototype.slice.call(document.querySelectorAll('.nav__item'));
 
-            if (event.currentTarget.classList.contains("-active") === false){
-              event.currentTarget.className += " -active";
+              for (var i = 0; i < arrayNavItems.length; i++) {
+
+                if (arrayNavItems[i].classList.contains('-active') ){
+
+                  arrayNavItems[i].classList.remove('-active');
+                }
+
+                clickedNavItem.className += " -active";
+              }
+
             }
 
-            // console.log (event.currentTarget.classList.contains("-active") );
+            navClickedItem(event);
 
           } // End if
         });
       });
+
     </script>
+
   </head>
   <body>
 
@@ -112,7 +125,8 @@
           <h2>Équipe éclairage & machinistes pour vos projets filmées</h2>
           <p>L'équipe de SurfSpot travaille dans l'industrie du cinéma & de la publicité québecoise depuis plus de 10 ans. Nous avons un camion complet, remplis de projecteurs & d'équipement machiniste, disponible pour vos projets:</p>
           <ul>
-            <li>Grosse Lampe</li>
+            <li>Grosses Lampes</li>
+            <li>Petites Lampes</li>
             <li>lite-mat</li>
             <li>Gros camion</li>
           </ul>
@@ -124,22 +138,22 @@
 
         <div class="section__content">
           <div class="contact-item">
-            <h2>Alexis Vallee Charest</h2>
-            <h3>Chef Eclairagiste</h3>
-            <p>514-888-8888</p>
-            <p><a href="#">alexisvalleecharest@gmail.com</a></p>
-            <p><a href="#">imdb</a></p>
+            <h2 class="contact__name">Alexis Vallee Charest</h2>
+            <h3 class="contact__title">Chef Eclairagiste</h3>
+            <p class="contact__phone">514-888-8888</p>
+            <a class="contact__link" href="#">alexisvalleecharest@gmail.com</a>
+            <a class="contact__link" href="http://www.imdb.com/name/nm3939625/" target="_blank">imdb</a>
           </div>
 
           <div class="contact-item">
-            <h2>Mathieu Gauvrault-Lefrancois</h2>
-            <h3>Chef Machino</h3>
-            <p>514-888-8888</p>
-            <p><a href="#">alexisvalleecharest@gmail.com</a></p>
-            <p><a href="#">imdb</a></p>
+            <h2 class="contact__name">Mathieu Gauvrault-Lefrancois</h2>
+            <h3 class="contact__title">Chef Machino</h3>
+            <p class="contact__phone">514-888-8888</p>
+            <a class="contact__email" href="#">alexisvalleecharest@gmail.com</a>
+            <a class="contact__link" href="http://www.imdb.com/name/nm4557943/" target="_blank">imdb</a>
           </div>
 
-          <p>Nous travaillons en collaboration avec <a href="#">cinepool</a></p>
+
 
         </div>
 
@@ -155,6 +169,7 @@
 
     <script src="assets/components/jquery/jquery.min.js"></script>
     <script src="assets/js/scripts.min.js"></script>
+    <script rc="assets/js/oldSchool.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
