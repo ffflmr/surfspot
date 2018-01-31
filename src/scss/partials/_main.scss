@@ -1,6 +1,5 @@
 .main {
-    font-family: 'Airstrike';
-    color: yellow;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .ss-section {
@@ -8,9 +7,18 @@
     height: 100vh;
 
     background-color: #fff;
+
+    @media only screen and (max-width:480px) {
+        display: block;
+        height: auto;
+    }
 }
 
 .section__content {
-    max-width: 60%; 
-    margin: auto;
+    width: 55%;
+    margin: auto 0 auto 35%;
+
+    @media only screen and (max-width:480px) {
+        margin: 0;
+    }
 }

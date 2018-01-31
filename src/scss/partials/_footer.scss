@@ -1,3 +1,15 @@
-.footer {
+.ss-footer {
+
+    .footer__item {
+        padding: 0 5%;
+
+        a {
+            color: $sarcelle;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
 
 }

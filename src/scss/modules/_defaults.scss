@@ -8,11 +8,25 @@ html {
   // background: radial-gradient(ellipse at center, $base 0, $darken 80%, $back 100%);
 }
 body {
-  font: 300 16px/1.6 'Helvetica Neue', Helvetica, Arial;
-  color: #444;
+  font: 300 16px/1.6 'Source Sans Pro', Helvetica, Arial;
+  letter-spacing: 2px;
+  color: black;
   transition: all .4s .3s ease-in;
 }
-body,html{
+body,html {
 	min-height: 100vh;
 	// overflow: hidden;
+}
+
+.ss-surname {
+    text-transform: uppercase;
+    display: block;
+}
+
+.logo {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+
+    color: black;
 }

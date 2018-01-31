@@ -2,10 +2,21 @@
 
   .section__content {
     display: flex;
+    flex-flow: row wrap;
+
   }
 
-  contact-item {
-    padding: 0 20px;
+  .content__photo {
+      flex: 2 100%;
+      // width: 100%;
+
+      .content__img {
+          max-width: 100%;
+      }
+  }
+
+  .contact-item {
+    flex: 1 auto;
   }
 
   .contact__name {
@@ -19,11 +30,29 @@
   .contact__email,
   .contact__link {
     display: block;
+    color: $sarcelle;
+    cursor: pointer;
 
 
+  }
+
+  .contact__link {
+        text-decoration: none;
+        padding: 10px 0;
   }
 
   &:first-child {
     font: 0.685em;
   }
+}
+
+.social__link {
+    flex: 2 100%;
+    margin-top: 20px;
+}
+.ss-social {
+    max-width: 50px;
+    margin-left: -10px;
+
+    fill : $sarcelle;
 }

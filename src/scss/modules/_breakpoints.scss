@@ -4,7 +4,50 @@
 @media only screen and (min-width:480px) {
 
 }
-@media only screen and (min-width:768px) {
+@media only screen and (max-width:768px) {
+    .ss-header {
+        position: absolute;
+    }
+
+    .ss-slideshow {
+        max-width: 100%;
+
+    }
+
+    .ss-section {
+        display: block;
+        height: auto;
+    }
+    .section__content  {
+        margin: 0;
+        width: 100%;
+
+        #about & {
+            padding: 30vh 15px;
+        }
+    }
+
+    #contact .content__photo {
+        width: 100%;
+        height: auto;
+        flex: auto;
+
+        .content__img {
+            max-width: 100%;
+        }
+    }
+
+    #contact .contact-item {
+        padding: 10vh 15px;
+    };
+
+    .social__link {
+        margin-left: 15px;
+    }
+
+    .ss-footer .footer__item {
+        padding: 0 15px;
+    }
 
 }
 @media only screen and (min-width:1024px) {

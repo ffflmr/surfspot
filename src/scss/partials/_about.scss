@@ -1,4 +1,15 @@
-.ss-about {
-  background-color: #2d8782;
-  padding: 0 15px;
+#about {
+
+    @media only screen and (max-width:768px) {
+
+        h1 {
+            font-size: 1.2em;
+        }
+
+        h2, p {
+            font-size: 1em;
+        }
+
+    }
+
 }
